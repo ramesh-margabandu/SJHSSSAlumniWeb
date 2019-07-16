@@ -2417,7 +2417,7 @@ ul.pull-left {
   z-index: 1;
 }
 .breadcrumbs-title.blank-space{
-	padding-top: 110px;
+	padding-top: 0px;
 }
 .breadcrumbs-menu {
   margin: -8px 0;

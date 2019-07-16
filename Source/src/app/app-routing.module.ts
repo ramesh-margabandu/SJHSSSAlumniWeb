@@ -3,18 +3,14 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { GalleryMainComponent } from './gallery/gallery-main/gallery-main.component';
-import { EventListComponent } from './events/event-list/event-list.component';
-import { EventDetailComponent } from './events/event-detail/event-detail.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent},
   { path: 'contact', component: ContactComponent},
   { path: 'gallery', component: GalleryMainComponent},
-  { path: 'events', 
-    children: [
-      {path: "", component: EventListComponent},
-      { path: ':id', component: EventDetailComponent}
-    ]},
+  //{ path: 'events', loadChildren: () => import('./admin/admin.module').then(mod => mod.AdminModule)},
+  { path: 'events', loadChildren: './events/events.module#EventsModule'},
+  { path: 'blogs', loadChildren: './blogs/blogs.module#BlogsModule'},
   //{ path: 'customers/:id', component: CustomerEditReactiveComponent },
   { path: '**', pathMatch:'full', redirectTo: '/home' } //catch any unfound routes and redirect to home page
 ];

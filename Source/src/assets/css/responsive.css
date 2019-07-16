@@ -285,7 +285,7 @@
 	}
 	/* Pages */
 	.breadcrumbs-title.blank-space{
-		padding-top: 80px;
+		padding-top: 0px;
 	}
 	.breadcrumbs-title .ptb-150 {
 	  padding-bottom: 80px;
