@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { event } from 'src/app/shared/events.model';
 
 @Component({
   selector: 'app-event-detail',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EventDetailComponent implements OnInit {
 
+  selectedEvent: event;
   constructor() { }
 
   ngOnInit() {

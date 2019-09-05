@@ -1,0 +1,63 @@
+<div class="breadcrumbs-title bg-img-4 parallax overlay dark-5">
+  <div class="container">
+      <div class="row">
+          <div class="col-xs-12">
+              <div class="breadcrumbs-menu ptb-150">
+                  <h1 class="l-height">Event Details</h1>
+                  <ul class="clearfix">
+                      <li><a href="index.html">Home</a> <i class="zmdi zmdi-chevron-right"></i></li>
+                      <li>Event Details</li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+      <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</div>
+<!-- Breadcrumbs & Page Title End -->
+<!-- Event Details Section Start -->
+<section class="event-details section-padding white-bg">
+  <div class="container">
+      <div class="row">
+          <div class="col-xs-12 col-sm-8 mobi-mb-50">
+              <router-outlet></router-outlet>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+                <div class="sidebar white-bg">                    
+                    <div class="widget mb-45">
+                        <div class="widget-title mb-30">
+                            <h5 class="mb-5">Upcoming Events</h5>
+                            <div class="horizontal-line">
+                                <hr class="top" />
+                                <hr class="bottom" />
+                            </div>
+                        </div>
+                        <div class="recent-post up-event">
+                            <ul>
+                                <li *ngFor="let event of upcomingEvents | slice:0:3">
+                                    <div class="thumb pull-left mr-20">
+                                        <a href="blog-details.html">
+                                            <img src="assets/images/s1.png" alt="Event Thumb" />
+                                        </a>
+                                    </div>
+                                    <div class="text">
+                                        <h6>{{event.date | date}}</h6>
+                                        <a href="blog-details.html"><h5 class="mb-5">{{event.title}}</h5></a>
+                                        <p><i class="zmdi zmdi-time"></i> {{event.time}}</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /.Events Widget End -->                    
+                </div>
+            </div>
+            <!-- /.Sidebar End -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+</section>
+<!-- Event Details Section End -->
+
